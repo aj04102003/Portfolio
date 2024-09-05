@@ -791,24 +791,27 @@ body.light .switch-wrap p span:nth-child(1):before {
 .contact form .input-box input{
     width:100%;
     padding: 2.5rem;
+    position: relative;
     font-size: 1.8rem;
     color: var(--text-color);
     background-color: var(--bg-color);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     resize: none;
     gap: 2rem;
 }
 .contact form textarea{
-    width:100%;
+    width:100%; 
     padding: 15rem;
+    text-align: center;
+    position: relative;
     font-size: 1.7rem;
     color: var(--text-color);
     background-color: var(--bg-color);
     border-radius: 2rem;
     border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     resize: none;
     gap: 2rem;
 
