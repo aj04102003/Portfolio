@@ -550,6 +550,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 ================================================== */
 .social-icons a{
     display: inline-flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
@@ -723,6 +724,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 }
 .project-card{
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -732,7 +734,7 @@ body.light .switch-wrap p span:nth-child(1):before {
     border: 2px  solid var(--main-color);
     border-radius: 3rem;
     gap: 2rem;
-    padding: 5rem 2rem ;
+    padding: 5rem 5rem ;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px var(--main-color);
