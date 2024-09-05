@@ -802,11 +802,11 @@ body.light .switch-wrap p span:nth-child(1):before {
     gap: 2rem;
 }
 .contact form textarea{
-    width:100%; 
+    width:auto; 
     padding: 15rem;
     text-align: center;
     position: relative;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     background-color: var(--bg-color);
     border-radius: 2rem;
