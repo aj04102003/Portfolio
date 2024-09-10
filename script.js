@@ -1,6 +1,6 @@
 
 
-/* Please ❤ this if you like it! */
+
 
 
 (function($) { "use strict";
@@ -77,3 +77,10 @@ menuIcon.onclick = () =>{
     menuIcon.classList.toggle('bx-x')
     navbar.classList.toggle('active');
 }
+$( '.js-input' ).keyup(function() {
+	if( $(this).val() ) {
+	   $(this).addClass('not-empty');
+	} else {
+	   $(this).removeClass('not-empty');
+	}
+  });
