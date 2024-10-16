@@ -1,11 +1,20 @@
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
 
+}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+
 
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Dhurjati", sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
@@ -31,11 +40,18 @@ body{
     font-style:italic;
   }
   
+.dhurjati-regular {
+    font-family: "Dhurjati", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
 :root {
     --bg-color: #ffffff;
-    --second-bg-color: #90908e;
-    --text-color: rgb(121, 83, 123);
-    --main-color:rgb(83, 49, 146) ;;
+    --second-bg-color:var(--second-bg-color);
+    --text-color: rgb(87, 74, 129);
+    --main-color:#8167a9;
 }
 html {
     font-size: 60%;
@@ -134,16 +150,17 @@ a:hover {
 	right:0;
 	top: 50px;
 	cursor: pointer;
+    
 }
 .logo-wrap a {
 	cursor: pointer;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Dhurjati", sans-serif;
 	font-weight: 900;
-	font-size: 20px;
+	font-size: 36px;
 	line-height: 20px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: #fff;
+	color: lightgray;
 	transition : all 0.3s ease-out;
 }
 .logo-wrap a span{ 
@@ -206,8 +223,8 @@ a:hover {
 .nav:before, .nav:after {
 	content: "";
 	position: fixed;
-  top: 20px;
-  left: 50px;
+    top: 20px;
+    left: 50px;
 	width: 0;
 	height: 0;
 	background-color: rgba(20, 21, 26,0.6);
@@ -416,24 +433,51 @@ body.nav-active .nav__list-item:nth-child(10) {
 	text-align: center;
 }
 .switch-wrap h1 {
-	font-weight: 900;
-	font-size: 46px;
+    font-family: "Dhurjati", sans-serif;
+	font-weight: 500;
+	font-size: 96px;
 	line-height: 1;
-	color: #fff;
+	color: rgb(172, 172, 101);
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 40px;
+	margin-bottom: 1px;
 	-webkit-transition: all 300ms linear;
 	transition: all 300ms linear; 
 }
-@media screen and (max-width: 580px){
-  .switch-wrap h1 {
-    font-size: 32px;
+@media screen and (max-width: 500px){
+    .switch-wrap h1{
+      font-size: 32px;
+    }
   }
+.switch-wrap H2{
+    font-weight: 900;
+	font-size: 46px;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    line-height: 1;
+    text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 1px;
+	-webkit-transition: all 300ms linear;
+	transition: all 300ms linear;   
 }
+@media screen and (max-width: 500px){
+    .switch-wrap h2{
+      font-size: 25px;
+      margin-left: 200px;
+      color: lightgray;
+    }
+  }
+.switch-wrap H2 span{
+    color: #8167a9;
+     
+}
+
+
 .switch-wrap p {
-	font-weight: 600;
-	font-size: 14px;
+    font-family: "Dhurjati", sans-serif;
+	font-weight: 300;
+	font-size: 24px;
 	letter-spacing: 1px;
 	line-height: 1;
 	color: #8167a9;
@@ -581,10 +625,10 @@ body.light .switch-wrap p span:nth-child(1):before {
     background-color: black;
     box-shadow: 0 0 15px var(--main-color);
     border-radius: 2.5rem;
-    font-size: 1.8rem;
+    font-size: 2.1rem;
     color: rgb(255, 255, 255);
     border: 2px solid transparent;
-    font-weight: 600;
+    font-weight: 300;
     transition: 0.3s ease-in-out;
 }
 .btn:hover{
@@ -593,41 +637,79 @@ body.light .switch-wrap p span:nth-child(1):before {
                 0 0 20px var(--main-color);
                
 }
-
-
-
 .about{
     display: flex;
-    padding: 20rem 20rem;
+    padding-top: 5rem;
+    padding: 20rem 10rem;
     justify-content: center;
-    align-items: center;
+    align-items: centre;
     gap: 30rem;
-    background: white;
+    background-color:white;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-position: center;
+    background-repeat: repeat;
     
 }
 .about-img img{
-    width: 24vw;
+    width: 28vw;
     height: auto;
-    padding: 2px;
-    border-radius: 10%;
-    box-shadow: 0 0 25px var(--text-color);
+    padding: 1rem;
+    border-top-left-radius: 48%;
+    border-top-right-radius: 48%;
+    box-shadow: 0 0 25px var(--second-bg-color);
     transition: 0.4s ease-in-out;
 }
+
 .about-img img:hover{
-    box-shadow: 0 0 25px var(--text-color),
-    0 0 50px var(--text-color),
-    0 0 90px var(--text-color); 
+    
+    box-shadow: 0 0 15px #8167a9,
+    0 0 25px #8167a9,
+    0 0 0px #8167a9;   
 }
+@media screen and (max-width: 500px){
+    .about-img img{
+        width: 54vw;
+        height: auto;
+        justify-content: center;  
+        margin-left: 300px;
+    }
+  }
 .about-content h2{
-    font-size: 7rem;
+    font-size: 8rem;
     text-align: left; 
-    color: var(--main-color);
+    color: #c5be72;
 }
 .about-content p{
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(64, 64, 65);
     font-weight:450;
     
+}
+.underline, .circle {
+	position: relative;
+	font-size: 4.5rem;
+}
+.circle::after{
+  content: '';
+  display: block;
+  width: 260px;
+  height: 60px;
+  border: 3px solid #c5be72;
+	position: absolute;
+	border-radius: 50%;
+	top: 52%;
+	left: 48%;
+	transform: translate(-50%, -50%);
+}
+.underline::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: #b79be2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 .about-content .btn{
    margin: 3rem 0;
@@ -658,7 +740,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 .services h2{
     margin-top: 5rem;
     padding-top: 10rem;
-    color:  rgb(152, 136, 187);
+    color:  rgb(172, 172, 101);
 }
 .services-container{
     display: grid;
@@ -670,9 +752,10 @@ body.light .switch-wrap p span:nth-child(1):before {
 }
 .service-box{
     display:flex;
+    
     justify-content: center;
     align-items: center;
-    background-color: var(--second-bg-color);
+    background-color: rgb(206, 204, 204);
     border-radius: 3rem;
     cursor: pointer;
     border: 5px solid transparent;
@@ -689,32 +772,40 @@ body.light .switch-wrap p span:nth-child(1):before {
 .service-info{
     display: flex;
     flex-direction: column;
-    text-align: center;
+   
     justify-content: center;
     align-items: center;
     padding: 5rem;  
 }
 .service-info h4{
+    text-align: center;
     font-size: 4rem;
     margin: 2rem 0;
     font-weight: 800;
   
 }
 .service-info p{
-    font-size: 1.4rem;
+    text-align: left;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 1.7;
+}
+.service-info p ul li{
+        display: inline;
+        text-align: left;
+      
 }
 .service-info i{
     font-size: 8rem;
 
 }
 .slider{
-    height: 300px;
-    margin-inline: 10rem;
-    margin-top: 15rem;
+    background-color: rgb(211, 211, 125);
+    height: 65px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     position: relative;
-    width:90%;
+    width:100%;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -722,7 +813,7 @@ body.light .switch-wrap p span:nth-child(1):before {
 .slide-track {
     display: flex;
     width: calc(250px *18);
-    animation: scroll 40s linear infinite;
+    animation: scroll 60s linear infinite;
 }
 .slide-track:hover{
     animation-play-state: paused;
@@ -736,12 +827,19 @@ body.light .switch-wrap p span:nth-child(1):before {
     }
 }
 .slide{
-    height: 200px;
-    width: 250px;
+    height: 75px;
+    width: 200px;
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     perspective: 100px;
+}
+.slide p{
+    color: #ffffff;
+    font-size:2lvh;
+}
+.slide span{
+    color: rgb(254, 254, 254);
 }
 img {
     width: 100%;
@@ -771,13 +869,132 @@ img.hover{
 .projects{
     padding-bottom: 10%;
     padding-top: 5%;
-    background: white;
+    background-color:white;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg');
+    background-position: center;
+    background-repeat: repeat;
 
     
 }
-.projects h2{
+.projects h1{
     color: var(--main-color);
+ 
 }
+.box{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-columns: minmax(240px, auto);
+    gap: 3rem;
+    row-gap: 5rem;
+    width: 400px;
+    position: relative;
+    margin: 5px auto;
+    overlay: hidden;
+    background-color: #b79be2
+}
+.box img{
+    width:100%;
+    height: 100%;
+    display: block;
+    object-fit:fill;
+    border: 1px solid rgb(221, 220, 220);
+}
+.box .box-content{
+    width:100%;
+    height: 98%;
+    position: absolute;
+    top: 0;
+    left:0;
+    text-align: center;
+
+}
+.box .box-content:before,
+.box .box-content:after{
+    content:"" ;
+    width: 95%;
+    height: 47%;
+    background: #8167a9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.box .box-content:before{
+    top: -10%;
+}
+.box .box-content:after{
+    bottom: -10%;
+}
+.box:hover .box-content:before{
+    top: 3%;
+    opacity: 0.8;
+}
+.box:hover .box-content:after{
+    bottom: 3%;
+    opacity: 0.8;
+}
+.box .content{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: all 0.5s;
+   
+}
+.box:hover .content{
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.box .social-icon {
+    padding: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+}
+.box .social-icon li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.box .social-icon a{
+    display: block;
+    width: 45px;
+    height: 45px;
+    line-height:45px;
+    font-size: 22px;
+    background: #604c7f;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    color: #000000;
+    transition: 0.3s ease;
+}
+.social-icon a:hover{
+    color:#604c7f;
+    background-color:#a49f61 ;
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px #302640;
+}
+.box .title{
+    color: white;
+    font-size: 28px;
+    margin-bottom: 7px;
+    text-transform: capitalize;
+}
+.box .post{
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
 .projects-box{
       
     display: grid;
@@ -796,8 +1013,7 @@ img.hover{
     text-align: center;
     background: rgb(178, 159, 219);
     background-size:cover; 
-    border: 2px  solid var(--main-color);
-    border-radius: 3rem;
+    border-radius: rem;
     gap: 2rem;
     padding: 5rem 5rem ;
     overflow: hidden;
@@ -808,18 +1024,18 @@ img.hover{
    
 }
 
-.project-card:hover{
-    box-shadow: 0 0 15px var(--main-color),
-                0 0 10px var(--main-color);
-    transform: scale(1.02);
-
-}
 
 .project-card img{
     max-width: 300px;
     border-radius: 2rem;
-    object-fit: cover;
-    border: 1px  solid black;
+    object-fit:cover;
+   
+}
+.project-card img:hover{
+    box-shadow: 0 0 15px white,
+                0 0 10px white;
+    transform: scale(1.02);
+
 }
 
 .project-card h3{
@@ -827,7 +1043,7 @@ img.hover{
     color: black
 }
 .project-card p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     align-content: center;
     color: black;
 }
@@ -836,86 +1052,47 @@ img.hover{
   
 }
 
-
-
 .contact{
-    display: flexbox;
-    margin: 8rem;
-    padding-top: 4%;
-    padding-bottom: 8%;
-
-}
-
-
-.contact-form {
-    display:inline-flexbox;
-    background-color: rgb(178, 159, 219) ;
-    border: 4px  solid var(--main-color);
-    padding: 80px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    margin: 0;
-    padding: 80px;
-    justify-content: center;
-    align-items: center;
-    height: 100vh
-}
-
-.contact-form h2 {
-    display: flex;
-    font-size: 70px;
-    padding: 10rem;
-  
-    text-align: center;
-    color: #ffffff;
-}
-
-.contact-form form {
-    display: block;
-    grid-template-columns: 900px;
-    gap: 15px;
-}
-
-.contact-form label {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--main-color);
-}
-
-.contact-form input
- { 
-    display: flex;
-    width: 80%;
-    padding: 15px;
-    border: 2px  solid var(--main-color);
-    border-radius: 10px;
+    padding-left: 18%;
+    padding-right: 18%;
     
+  
 }
-.contact-form textarea{
+
+.contact h2{
+    font-size: 96px;
     display: flex;
-    width: 80%;
-    padding: 20px;
-    height: 100px;
-    border: 2px  solid var(--main-color);
-    border-radius: 10px;
-
+    align-items: center;
+    color: #c5be72;
 }
-
-.contact-form button {
-    background-color: #512e79;
-    margin: 18px;
-    color: #fff;
-    padding: 20px;
-    width: 150px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem 0;
+    text-align: center;
+    text-align: center;
 }
-
-.contact-form button:hover {
-    background-color: #00060a;
+.contact form .input-box input,
+.contact form textarea{
+    width:100%;
+    padding: 2.3rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
 }
-
+.animation {
+    height: 800px;
+    width: 800px;
+    margin-right: 1px;
+    padding-left:400px ;
+    
+  }
 
 .footer ul{
     text-align: centre;
@@ -963,32 +1140,26 @@ img.hover{
     .gradient-btn{
         display: none;
     }
-    .home{
-        flex-direction: column-reverse;
-        margin: 5rem 0;
-        gap: 5rem;
-    }
-    .home-content{
+    .social-icon a{
+        display: inline-flex;
+        position: relative;
+        justify-content: center;
         align-items: center;
-        text-align: center;
+        font-size: 2rem;
+        padding: 2rem;
+        float:left;
+        margin-top: 4rem;
+        margin-left: 1.5rem;
+        background: transparent;
+        border: 2px solid var(--main-color);
+        border-radius: 10%;
+        color: var(--main-color);
+        transition: 0.3s ease;
     }
-    .home-img img{
-        width: 56vw;
+    .social-icon a:hover{
+        color: var(--text-color);
+        background-color: var(--main-color);
+        transform: scale(1.2)translateY(-5px);
+        box-shadow: 0 0 25px var(--main-color);
     }
-    .about{
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .about h2{
-        text-align: center;
-        margin: 2rem 0;
-    }
-    .about img{
-        width: 52vw
-    }
-    
-    .contact form{
-        flex-direction: column;
-    }
-    
 }
